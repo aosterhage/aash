@@ -17,7 +17,7 @@ It is an attempt to do many things:
 - Thoroughly tested modules
   - I would like to attempt to approach building `aash` by breaking it into testable chunks and _really_ consider what tests should be included. I want the code to be organized into succint modules with tests in each that give me enough confidence to not need to execute the binary before merging.
 - Follow CodeCrafters
-  - CodeCrafters provides guides to build cool things by breaking them into small steps with testing to ensure your code works. I will be, minimally, referencing the Build your own Shell project to help me, and potentially committing this repo's code to CodeCrafters to verify it works as they outlined.
+  - CodeCrafters provides guides to build cool things by breaking them into small steps with testing to ensure your code works. I will be, minimally, referencing the [Build your own Shell](https://app.codecrafters.io/courses/shell/overview) project to help me, and potentially committing this repo's code to CodeCrafters to verify it works as they outlined.
   
 ### Stretch Goal
 - POSIX-compliant (or a subset)
