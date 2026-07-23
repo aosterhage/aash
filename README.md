@@ -14,10 +14,14 @@ It is an attempt to do many things:
   - I want to write all (or most) of the code. I also want `aash` to be able to run on as many systems as possible and writing it only in Rust with no (or minimal dependencies) supports that.
 - Cross-platform
   - I would like for `aash` to be able to run in any environment that Cargo supports. This is probably not fully achievable and so, at a minimum, `aash` should run on MacOS and Linux, with a preference to run on any Unix-like system (e.g. FreeBSD).
-- POSIX-compliant (or a subset)
-  - Shell feature-sets can vary pretty wildly and some are quite complex and time-consuming for a single developer to implement. Targetting `aash` to be POSIX-compliant gives me a clear set of features to target, while limiting the scope from being too large. Even POSIX-compliance may be too large, so its possible I only ever implement a subset.
 - Thoroughly tested modules
   - I would like to attempt to approach building `aash` by breaking it into testable chunks and _really_ consider what tests should be included. I want the code to be organized into succint modules with tests in each that give me enough confidence to not need to execute the binary before merging.
+- Follow CodeCrafters
+  - CodeCrafters provides guides to build cool things by breaking them into small steps with testing to ensure your code works. I will be, minimally, referencing the Build your own Shell project to help me, and potentially committing this repo's code to CodeCrafters to verify it works as they outlined.
+  
+### Stretch Goal
+- POSIX-compliant (or a subset)
+  - Shell feature-sets can vary pretty wildly and some are quite complex and time-consuming for a single developer to implement. Targetting `aash` to be POSIX-compliant gives me a clear set of features to target, while limiting the scope from being too large. Even POSIX-compliance may be too large, so its possible I only ever implement a subset.
 
  ## Versioning
 `aash` will follow [Semantic Versioning](https://semver.org). The "public API" will be the features of the shell as written in user documentation. `aash` will start with a major version number of `0` with no clear direction on when to move to `1.0.0`.
