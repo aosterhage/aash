@@ -1,9 +1,8 @@
 use std::io::{BufWriter, Write};
 
-/// Evaluates `input` and returns the corresponding `output` and `error` streams.
+/// Evaluates `command` (with `argv`) and returns the corresponding `output` and `error` streams.
 ///
-/// `eval` will internally buffer reads from `input` and buffer writes to `output`
-/// and `error` and only flush when necessary.
+/// `eval` will internally buffer writes to `output` and `error` and only flush when necessary.
 pub fn eval<T: Write, U: Write>(
     command: &str,
     _argv: &[&str],
