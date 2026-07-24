@@ -1,5 +1,5 @@
 use std::io::Write as _;
-use std::io::{stdin, stdout};
+use std::io::{stderr, stdin, stdout};
 use std::{write, writeln};
 
 use aash::input::parser;
@@ -20,10 +20,13 @@ fn main() {
 
     // Read and parse an input line.
     stdin().read_line(&mut input_buffer).unwrap();
-    let argv = &parser::parse(input_buffer.as_str())[..];
+    let parsed_input = &parser::parse(input_buffer.as_str())[..];
 
-    // Since we don't have any logic yet, print out `argv` with a newline separating each argument.
-    argv.iter().for_each(|arg| {
-        writeln!(&mut stdout(), "{}", arg).unwrap();
-    });
+    // The `command` is the first word parsed from the input.
+    // `argv` is the remaining words in the parsed input.
+    let command = &parsed_input[0];
+    let _argv = &parsed_input[1..];
+
+    // If we don't know what the command is, print an error to stderr.
+    writeln!(&mut stderr(), "{}: command not found", command).unwrap();
 }
